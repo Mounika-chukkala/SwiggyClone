@@ -10,7 +10,7 @@ export default function Navbar() {
   
   const navItems = [
     {
-      name: "Swiggy Corporate",
+      name: "NiteEats Corporate",
       image: <i className="fi fi-rr-shopping-bag mt-1 text-xl"></i>,
       path:"/corporate",
     },
@@ -184,8 +184,8 @@ const navigate=useNavigate()
         <div className="w-[70%] flex justify-between items-center">
           <div className="w-[40%] py-2 flex justify-center items-center gap-3">
             <Link to={"/"}>
-              {/* <img className="w-7" src="logo.png" alt="swiggy" /> */}
-              <svg className="VXJlj" viewBox="0 0 61 61" height="49" width="49">
+              <img className="w-20" src="src/assets/NiteEats.svg" alt="NiteEats" />
+              {/* <svg className="VXJlj" viewBox="0 0 61 61" height="49" width="49">
                 <g clipPath="url(#a)">
                   <path
                     fill="#FF5200"
@@ -203,7 +203,7 @@ const navigate=useNavigate()
                     <path fill="#fff" d="M.32.5h60v60h-60z"></path>
                   </clipPath>
                 </defs>
-              </svg>
+              </svg> */}
             </Link>
             <div
               className="flex justify-center items-center gap-1 cursor-pointer"
@@ -222,6 +222,7 @@ const navigate=useNavigate()
               data.name=="Sign In"?
               <div key={i} className="cursor-pointer" onClick={handleLogin}>
               <div className="flex  items-center gap-1" key={i}>
+                <p>{console.log(userData?.photo)}</p>
                 { userData? <img src={userData.photo} className="rounded-3xl w-[25px]" alt="img"/>:data.image}
                 <p className="text-[15px]">{userData?userData.name :data.name}</p>
               

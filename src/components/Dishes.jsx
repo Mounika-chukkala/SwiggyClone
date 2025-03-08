@@ -35,9 +35,9 @@ const dispatch=useDispatch();
             itemId
             }))
     }
-    else{
-        toast.error(`Try to order from ${restaurantName} or start afresh`)
-    }
+    // else{
+    //     toast.error(`Try to order from ${restaurantName} or start afresh`)
+    // }
  }
   return (
     <div className={`bg-white mt-2 rounded-2xl p-4  mx-2  `}>

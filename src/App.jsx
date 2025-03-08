@@ -8,6 +8,7 @@ import { CartContext, Coordinate, Visibility } from "./context/contextApi";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import SignInPage from "./components/SignInPage";
+import EmptyPage from "./components/EmptyPage";
 function App() {
   // const [visible,setVisible]=useState(false);
 const [coord,setCoord] = useState({lat:18.9690247,lng:72.8205292})
@@ -32,14 +33,14 @@ return (
         <Route path="/restaurantMenu/:id" element={<RestaurantMenu />}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/search" element={<Search/>}></Route>
-
         {/* <Route path="/signin" element={<SignInPage/>}></Route> */}
 
         {/* <Route path="/corporate" element={<h1>coming soon</h1>}></Route>
         <Route path="/signin" element={<h1>coming soon</h1>}></Route>
         <Route path="/offers" element={<h1>coming soon</h1>}></Route>
         <Route path="/help" element={<h1>coming soon</h1>}></Route> */}
-<Route path="*" element={<h1>Hello</h1>}></Route>
+        {/* <h1 className="mt-20 text-2xl font-bold">Error</h1> */}
+<Route path="*" element={<EmptyPage/>}></Route>
       </Route>
     </Routes>
     </div>
