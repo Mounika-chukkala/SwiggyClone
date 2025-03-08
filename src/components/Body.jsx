@@ -23,7 +23,7 @@ const navigate=useNavigate();
          const res=await data.json()
 setTopResTitle(res?.data?.cards[1]?.card?.card?.header?.title)
 setOnlineTitle(res?.data?.cards[2]?.card?.card?.title)
-console.log(res)
+// console.log(res)
 
 let mainData=res?.data?.cards.find(data=> data?.card?.card?.id=="top_brands_for_you").card?.card?.gridElements?.infoWithStyle?.restaurants
 
@@ -40,7 +40,7 @@ let data2=res?.data?.cards.find(data=> data?.card?.card?.id=="whats_on_your_mind
         fetchAndNavigate();
      
      },[lat,lng])
-console.log(TopRestaurantData)
+// console.log(TopRestaurantData)
      const filterVal=useSelector((state)=>state.filterSlice.filterVal)
      const filterData=TopRestaurantData.filter(item=>{
       if(!filterVal) return true;

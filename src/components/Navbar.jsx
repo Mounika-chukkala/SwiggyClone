@@ -184,7 +184,7 @@ const navigate=useNavigate()
         <div className="w-[70%] flex justify-between items-center">
           <div className="w-[40%] py-2 flex justify-center items-center gap-3">
             <Link to={"/"}>
-              <img className="w-20" src="src/assets/NiteEats.svg" alt="NiteEats" />
+              <img className="w-20 text-xl font-bold text-orange-500" src="src/assets/NiteEats.svg" alt="NiteEats" />
               {/* <svg className="VXJlj" viewBox="0 0 61 61" height="49" width="49">
                 <g clipPath="url(#a)">
                   <path
@@ -222,7 +222,7 @@ const navigate=useNavigate()
               data.name=="Sign In"?
               <div key={i} className="cursor-pointer" onClick={handleLogin}>
               <div className="flex  items-center gap-1" key={i}>
-                <p>{console.log(userData?.photo)}</p>
+                {/* <p>{console.log(userData?.photo)}</p> */}
                 { userData? <img src={userData.photo} className="rounded-3xl w-[25px]" alt="img"/>:data.image}
                 <p className="text-[15px]">{userData?userData.name :data.name}</p>
               
